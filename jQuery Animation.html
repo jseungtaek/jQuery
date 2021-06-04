@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#right_b').click(function(){
+                $("#right_d").animate({left:'300px'});
+            });
+            $('#inc_b').click(function(){
+                $('#inc_d').animate({
+                    left:'250px',
+                    opacity:'0.2',
+                    height:'150px',
+                    width:'150px'
+                })
+            })
+            $('#add_b').click(function(){
+                $('#add_d').animate({
+                    left:'250px',
+                    height:'+=10px',
+                    width:'+=10px'
+                })
+            })
+            $('#toggle_b').click(function(){
+                $('#toggle_d').animate({
+                    height:'toggle'
+                })
+            })
+            $("#around_b").click(function(){
+                var div = $("#around_d");
+                div.animate({height: '300px', opacity: '0.4'}, "slow");
+                div.animate({fontSize:'5em'},'slow');
+                div.animate({width: '300px', opacity: '0.8'}, "slow");
+                div.animate({fontSize:'2em'},'slow');
+                div.animate({height: '100px', opacity: '0.4'}, "slow");
+                div.animate({fontSize:'5em'},'slow');
+                div.animate({width: '100px', opacity: '0.8'}, "slow");
+                div.animate({fontSize:'2em'},'slow');
+            });
+        });
+    </script>
+    <style>
+    </style>
+</head>
+<body>
+    <button id="right_b">Start Animation</button>
+    <div id="right_d" class="square" style="background: powderblue; width: 100px; height: 100px; position:absolute;"></div>
+    <button id="inc_b">Start Animation</button>
+    <div id="inc_d" class="square" style="background: darkblue; width: 100px; height: 100px; position:absolute; margin-top: 150px;"></div>
+    <button id="add_b">Start Animation</button>
+    <div id="add_d" class="square" style="background: pink; width: 100px; height: 100px; position:absolute; margin-top: 350px;"></div>
+    <button id="toggle_b">Start Animation</button>
+    <div id="toggle_d" class="square" style="background: hotpink; width: 100px; height: 100px; position:absolute; margin-top: 550px;"></div>
+    <button id="around_b">Start Animation</button>
+    <div id="around_d" class="square" style="background: rebeccapurple; width: 100px; height: 100px; position:absolute; margin-top: 750px;">jQuery</div>
+</body>
+</html>
