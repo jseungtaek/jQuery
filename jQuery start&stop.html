@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#flip').click(function(){
+                $('#panel').slideToggle(1000);  
+            })
+            $('#start').click(function(){
+                $('#panel').slideToggle(1000);
+            })
+            $('#stop').click(function(){
+                $('#panel').stop();
+            })
+        })
+            
+        
+    </script>
+    <style>
+        #panel,#flip{
+            text-align: center;
+            font-size: 2em;
+            color: powderblue;
+            background-color: rosybrown;
+            border: 1px solid#cccccc;
+            border-radius: 5px;
+        }
+        #panel{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="start">Start Button</button>
+    <button id="stop">Stop Button</button>
+    <div id="flip">slide panel</div>
+    <div id="panel">Hello World!!</div>
+</body>
+</html>
