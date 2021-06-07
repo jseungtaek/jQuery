@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#hide_s").click(function(){
+                $('#hide_sp').hide('slow',function(){
+                    alert("The paragraph is now hidden!");
+                })
+            })
+            $("#hide_f").click(function(){
+                $('#hide_fp').hide(1000);
+                alert("The paragraph is now hidden!");
+                
+            })
+        })
+    </script>
+</head>
+<body>
+    <button id="hide_s">Hide</button>
+    <p id="hide_sp">This is a paragraph</p><hr>
+    <button id="hide_f">Hide</button>
+    <p id="hide_fp">This is a paragraph</p>
+</body>
+</html>
